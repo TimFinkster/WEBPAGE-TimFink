@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Booking | Tim Fink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Tim Fink">
+    <meta name="description" content="Booking und Kontakt für Tim Fink - Event-Anfragen, Kollaborationen und Anfragen.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="HTMLPage1.html">Home</a>
+        <a href="releases.html">Releases</a>
+        <a href="Interactive_Mixer.html">Interactive Mixer</a>
+        <a href="booking.html" class="active" aria-current="page">Booking</a>
+        <a href="Team-Impressum.html">Team / Impressum</a>
+    </nav>
+
+    <header>
+        <h1>Booking & Kontakt</h1>
+        <p>Anfragen für Events, Kollaborationen und mehr</p>
+    </header>
+
+    <main>
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <h2>📬 Newsletter</h2>
+            <p>Neue Releases, Events und exklusive Updates. Melde dich für meinen Newsletter an und stay up to date!</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input 
+                    type="email" 
+                    placeholder="Deine E-Mail Adresse" 
+                    required 
+                    aria-label="Newsletter E-Mail">
+                <button type="submit" class="newsletter-btn">Anmelden</button>
+            </form>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <h2>📧 Kontaktformular</h2>
+            <p>Hast du eine Event-Anfrage, möchtest zusammenarbeiten oder einfach Feedback geben? Schreib mir eine Nachricht!</p>
+            
+            <div class="success-message" id="successMessage">
+                ✓ Nachricht erfolgreich gesendet! Ich melde mich bald bei dir.
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonnummer (optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Betreff *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Wähle ein Thema --</option>
+                        <option value="event_booking">Event-Anfrage</option>
+                        <option value="collaboration">Zusammenarbeit</option>
+                        <option value="interview">Interview / Podcast</option>
+                        <option value="remix_request">Remix-Anfrage</option>
+                        <option value="other">Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nachricht *</label>
+                    <textarea id="message" name="message" required placeholder="Schreib deine Nachricht hier..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Nachricht Senden</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>&copy; 2026 Tim Fink | Web-Technologien Projekt | FH Salzburg</footer>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>

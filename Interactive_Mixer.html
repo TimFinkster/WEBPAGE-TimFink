@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Interactive Mixer | Tim Fink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Tim Fink">
+    <meta name="description" content="Interaktiver Stem-Mixer im DAW-Design mit nativer JavaScript Audio-Steuerung.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="HTMLPage1.html">Home</a>
+        <a href="releases.html">Releases</a>
+        <a href="Interactive_Mixer.html" class="active" aria-current="page">Interactive Mixer</a>
+        <a href="booking.html">Booking</a>
+        <a href="Team-Impressum.html">Team / Impressum</a>
+    </nav>
+
+    <!-- Mit Gemini ausgearbeitet, um die Audio-Engine und das UI zu erstellen. -->
+    <header>
+        <h1>Interactive Studio</h1>
+        <p>Echtzeit Audio-Processing per nativer JavaScript-Steuerung</p>
+    </header>
+
+    <main class="daw-container">
+
+        <div class="daw-header">
+            <div class="song-selector">
+                <select id="songSelect">
+                    <option value="du_sagst_nichts">Du sagst nichts</option>
+                    <option value="aquarium">Aquarium</option>
+                </select>
+            </div>
+
+            <button class="glow-button" id="masterPlayBtn">
+                <span id="playBtnText">▶ START AUDIO ENGINE</span>
+            </button>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-wrapper">
+                <span class="time-label" id="currentTime">0:00</span>
+                <div class="timeline-track">
+                    <div class="timeline-progress" id="progressBar"></div>
+                    <input type="range" class="timeline-slider" id="seekSlider" min="0" max="100" value="0">
+                </div>
+                <span class="time-label" id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="mixer-board" id="mixerBoard">
+            <!-- Wird dynamisch geladen -->
+        </div>
+
+    </main>
+
+    <footer>&copy; 2026 Tim Fink | Web-Technologien Projekt | FH Salzburg</footer>
+
+    <!-- Skript erst nach dem Rendern des DOMs ausführen -->
+    <script src="js/mixer.js"></script>
+</body>
+</html>
