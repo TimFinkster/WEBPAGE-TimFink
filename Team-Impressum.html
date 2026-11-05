@@ -10,14 +10,21 @@
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="releases.html">Releases</a> |
-        <a href="Interactive_Mixer.html">Interactive Mixer</a> |
-        <a href="booking.html">Booking</a> |
-        <a href="Team-Impressum.html" class="active">Team / Impressum</a>
-    </nav>
+    <nav id="navbar">
+        <button id="hamburger" class="hamburger" aria-label="Navigation öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="HTMLPage1.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="Interactive_Mixer.html">Interactive Mixer</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Team-Impressum.html">Team / Impressum</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>Team & Impressum</h1>
         <p>Hinter den Kulissen von Tim Fink</p>
@@ -98,5 +105,6 @@
     </div>
 
     <footer>&copy; 2026 Tim Fink | Web-Technologien Projekt | FH Salzburg</footer>
+    <script src="js/menu.js"></script>
 </body>
 </html>
