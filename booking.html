@@ -10,12 +10,20 @@
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="releases.html">Releases</a>
-        <a href="Interactive_Mixer.html">Interactive Mixer</a>
-        <a href="booking.html" class="active" aria-current="page">Booking</a>
-        <a href="Team-Impressum.html">Team / Impressum</a>
+    <nav id="navbar">
+        <button id="hamburger" class="hamburger" aria-label="Navigation öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="HTMLPage1.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="Interactive_Mixer.html">Interactive Mixer</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Team-Impressum.html">Team / Impressum</a></li>
+        </ul>
     </nav>
 
     <header>
@@ -29,11 +37,10 @@
             <h2>📬 Newsletter</h2>
             <p>Neue Releases, Events und exklusive Updates. Melde dich für meinen Newsletter an und stay up to date!</p>
             <form class="newsletter-form" id="newsletterForm">
-                <input 
-                    type="email" 
-                    placeholder="Deine E-Mail Adresse" 
-                    required 
-                    aria-label="Newsletter E-Mail">
+                <input type="email"
+                       placeholder="Deine E-Mail Adresse"
+                       required
+                       aria-label="Newsletter E-Mail">
                 <button type="submit" class="newsletter-btn">Anmelden</button>
             </form>
         </section>
@@ -42,7 +49,7 @@
         <section class="contact-section">
             <h2>📧 Kontaktformular</h2>
             <p>Hast du eine Event-Anfrage, möchtest zusammenarbeiten oder einfach Feedback geben? Schreib mir eine Nachricht!</p>
-            
+
             <div class="success-message" id="successMessage">
                 ✓ Nachricht erfolgreich gesendet! Ich melde mich bald bei dir.
             </div>
@@ -90,5 +97,6 @@
     <footer>&copy; 2026 Tim Fink | Web-Technologien Projekt | FH Salzburg</footer>
 
     <script src="js/booking.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
