@@ -10,12 +10,20 @@
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="releases.html">Releases</a>
-        <a href="Interactive_Mixer.html" class="active" aria-current="page">Interactive Mixer</a>
-        <a href="booking.html">Booking</a>
-        <a href="Team-Impressum.html">Team / Impressum</a>
+    <nav id="navbar">
+        <button id="hamburger" class="hamburger" aria-label="Navigation öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="HTMLPage1.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="Interactive_Mixer.html">Interactive Mixer</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Team-Impressum.html">Team / Impressum</a></li>
+        </ul>
     </nav>
 
     <!-- Mit Gemini ausgearbeitet, um die Audio-Engine und das UI zu erstellen. -->
@@ -60,5 +68,6 @@
 
     <!-- Skript erst nach dem Rendern des DOMs ausführen -->
     <script src="js/mixer.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
