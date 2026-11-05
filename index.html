@@ -10,12 +10,20 @@
 </head>
 <body>
 
-    <nav>
-        <a href="index.html" class="active">Home</a> |
-        <a href="releases.html">Releases</a> |
-        <a href="Interactive_Mixer.html">Interactive Mixer</a> |
-        <a href="booking.html">Booking</a> |
-        <a href="Team-Impressum.html">Team / Impressum</a>
+    <nav id="navbar">
+        <button id="hamburger" class="hamburger" aria-label="Navigation öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="Interactive_Mixer.html">Interactive Mixer</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Team-Impressum.html">Team / Impressum</a></li>
+        </ul>
     </nav>
 
     <header>
@@ -35,11 +43,13 @@
         </div>
 
         <aside>
-            <img src="img/timmi-und-die-gang-02604.jpg" alt="Tim Fink Live in Salzburg" />
+            <img src="img/timmi-und-die-gang-02604.jpg" alt="Tim Fink Live in Salzburg" onerror="this.src='https://via.placeholder.com/300x380/16a34a/ffffff?text=Bild+fehlt'" />
             <p style="font-size: 0.9rem; color: #64748b; margin-top: 12px; font-weight: 500;">Tim Fink - Live in Salzburg</p>
         </aside>
     </article>
 
     <footer>&copy; 2026 Tim Fink | Web-Technologien Projekt | FH Salzburg</footer>
+
+    <script src="js/menu.js"></script>
 </body>
 </html>
