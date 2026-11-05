@@ -889,3 +889,238 @@ input[type=range].vertical-fader {
         justify-content: center;
     }
 }
+
+/* =========================================
+   RESPONSIVE DESIGN - MOBILE
+   ========================================= */
+
+/* Hamburger Menu - nur auf Handy sichtbar */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    background: #0f172a;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-menu li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.5rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #22c55e;
+}
+
+/* Release Cards - Responsiv */
+article.release-card {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cover-art {
+    flex: 0 0 150px;
+    height: 150px;
+    min-width: 150px;
+}
+
+.track-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* =========================================
+   MOBILE DEVICES (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    /* Hamburger Menu anzeigen */
+    .hamburger {
+        display: flex;
+        order: 1;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 1rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-left: 3px solid transparent;
+        transition: all 0.2s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        border-left-color: #22c55e;
+        background: rgba(34, 197, 94, 0.1);
+    }
+
+    /* Release Cards auf Handy: Bilder oben */
+    article.release-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .cover-art {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .cover-art img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .track-info {
+        min-width: unset;
+    }
+
+    /* Header responsiv */
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    /* Section und Article padding */
+    section, article {
+        padding: 1.5rem;
+    }
+
+    section h2, .section h2, .content-area h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================================
+   SEHR KLEINE GERÄTE (max-width: 480px)
+   ========================================= */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    nav {
+        border-radius: 4px;
+        padding: 0.75rem;
+    }
+
+    header {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    section, article {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .cover-art {
+        height: 200px;
+    }
+
+    article.release-card {
+        gap: 1rem;
+    }
+
+    .glow-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
