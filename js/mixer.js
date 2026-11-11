@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`  📥 ${stem.name}: Laden startet...`);
             });
             
-            audioEl.addEventListener('loadedmetadata', () => {
-                console.log(`  ✅ ${stem.name}: Metadaten geladen (${audioEl.duration.toFixed(2)}s)`);
-                loadedCount++;
-                checkAllLoaded();
-            });
+           audioEl.addEventListener('canplaythrough', () => {
+    console.log(`  ✅ ${stem.name}: Bereit zum Abspielen`);
+    loadedCount++;
+    checkAllLoaded();
+});
             
             audioEl.addEventListener('canplay', () => {
                 console.log(`  ▶️ ${stem.name}: Kann abspielen`);
