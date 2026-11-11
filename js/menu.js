@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== Active Link hervorheben =====
     function setActiveLink() {
         const navLinks = document.querySelectorAll('.nav-menu a');
-        const currentFile = window.location.pathname.split('/').pop() || 'HTMLPage1.html';
+        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
 
         navLinks.forEach(link => {
             link.classList.remove('active');
